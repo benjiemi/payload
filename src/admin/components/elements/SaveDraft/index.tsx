@@ -50,7 +50,7 @@ const SaveDraft: React.FC = () => {
       onClick={saveDraft}
       disabled={!canSaveDraft}
     >
-      Save draft
+      存为草稿
     </FormSubmit>
   );
 };

@@ -28,7 +28,7 @@ const Default: React.FC<Props> = ({ children, className }) => {
   return (
     <div className={classes}>
       <Meta
-        title="Dashboard"
+        title="后台面板"
         description="Dashboard for Payload CMS"
         keywords="Dashboard, Payload, CMS"
       />

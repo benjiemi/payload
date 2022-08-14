@@ -59,7 +59,7 @@ const ForgotPassword: React.FC = () => {
           buttonStyle="secondary"
           to={admin}
         >
-          Back to Dashboard
+          Back to 后台面板
         </Button>
       </MinimalTemplate>
     );

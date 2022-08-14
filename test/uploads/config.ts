@@ -80,13 +80,13 @@ export default buildConfig({
     const uploadsDir = path.resolve(__dirname, './media');
     removeFiles(uploadsDir);
 
-    await payload.create({
-      collection: 'users',
-      data: {
-        email: devUser.email,
-        password: devUser.password,
-      },
-    });
+    // await payload.create({
+    //   collection: 'users',
+    //   data: {
+    //     email: devUser.email,
+    //     password: devUser.password,
+    //   },
+    // });
     // Create image
     const filePath = path.resolve(__dirname, './image.png');
     const file = getFileByPath(filePath);

@@ -48,8 +48,8 @@ function initCollectionsGraphQL(payload: Payload): void {
       },
     } = collection;
 
-    const singularLabel = formatName(singular);
-    let pluralLabel = formatName(plural);
+    const singularLabel = formatName(slug);
+    let pluralLabel = formatName(slug);
 
     // For collections named 'Media' or similar,
     // there is a possibility that the singular name

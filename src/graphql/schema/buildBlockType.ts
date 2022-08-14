@@ -13,7 +13,7 @@ function buildBlockType(payload: Payload, block: Block): void {
   } = block;
 
   if (!payload.types.blockTypes[slug]) {
-    const formattedBlockName = formatName(singular);
+    const formattedBlockName = formatName(slug);
     payload.types.blockTypes[slug] = buildObjectType(
       payload,
       formattedBlockName,

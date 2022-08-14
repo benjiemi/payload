@@ -126,7 +126,7 @@ function buildMutationInputType(payload: Payload, name: string, fields: Field[],
       let type: PayloadGraphQLRelationshipType;
 
       if (Array.isArray(relationTo)) {
-        const fullName = `${combineParentName(parentName, field.label === false ? toWords(field.name, true) : field.label)}RelationshipInput`;
+        const fullName = `${combineParentName(parentName, toWords(field.name, true))}RelationshipInput`;
         type = new GraphQLInputObjectType({
           name: fullName,
           fields: {
@@ -154,7 +154,7 @@ function buildMutationInputType(payload: Payload, name: string, fields: Field[],
       };
     },
     array: (inputObjectTypeConfig: InputObjectTypeConfig, field: ArrayField) => {
-      const fullName = combineParentName(parentName, field.label === false ? toWords(field.name, true) : field.label);
+      const fullName = combineParentName(parentName, toWords(field.name, true));
       let type: GraphQLType | GraphQLList<GraphQLType> = buildMutationInputType(payload, fullName, field.fields, fullName);
       type = new GraphQLList(withNullableType(field, type, forceNullable));
       return {
@@ -164,7 +164,7 @@ function buildMutationInputType(payload: Payload, name: string, fields: Field[],
     },
     group: (inputObjectTypeConfig: InputObjectTypeConfig, field: GroupField) => {
       const requiresAtLeastOneField = field.fields.some((subField) => (!fieldIsPresentationalOnly(subField) && subField.required && !subField.localized));
-      const fullName = combineParentName(parentName, field.label === false ? toWords(field.name, true) : field.label);
+      const fullName = combineParentName(parentName, toWords(field.name, true));
       let type: GraphQLType = buildMutationInputType(payload, fullName, field.fields, fullName);
       if (requiresAtLeastOneField) type = new GraphQLNonNull(type);
       return {

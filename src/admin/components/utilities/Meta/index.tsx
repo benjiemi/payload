@@ -10,10 +10,10 @@ const Meta: React.FC<Props> = ({
   lang = 'en',
   meta = [],
   title,
-  keywords = 'CMS, Admin, Dashboard',
+  keywords = '后台面板',
 }) => {
   const config = useConfig();
-  const titleSuffix = config.admin.meta?.titleSuffix ?? '- Payload';
+  const titleSuffix = config.admin.meta?.titleSuffix ?? '- 后台面板';
   const favicon = config.admin.meta.favicon ?? payloadFavicon;
   const ogImage = config.admin.meta.ogImage ?? payloadOgImage;
 

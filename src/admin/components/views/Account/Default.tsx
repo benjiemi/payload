@@ -70,7 +70,7 @@ const DefaultAccount: React.FC<Props> = (props) => {
               <Meta
                 title="Account"
                 description="Account of current user"
-                keywords="Account, Dashboard, Payload, CMS"
+                keywords="后台面板"
               />
               <Eyebrow />
               {!(collection.versions?.drafts && collection.versions?.drafts?.autosave) && (
@@ -98,7 +98,7 @@ const DefaultAccount: React.FC<Props> = (props) => {
                 <Gutter
                   className={`${baseClass}__payload-settings`}
                 >
-                  <h3>Payload Settings</h3>
+                  <h3>后台设置</h3>
                   <ToggleTheme />
                 </Gutter>
               </div>

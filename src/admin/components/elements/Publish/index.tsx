@@ -26,7 +26,7 @@ const Publish: React.FC<Props> = () => {
       onClick={publish}
       disabled={!canPublish}
     >
-      Publish changes
+      发布修改
     </FormSubmit>
   );
 };

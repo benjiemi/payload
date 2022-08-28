@@ -239,6 +239,7 @@ function buildObjectType(payload: Payload, name: string, fields: Field[], parent
           },
         });
       } else {
+        // ({ type } = payload.collections[relationTo as string].graphQL);
         ({ type } = payload.collections[relationTo as string].graphQL);
       }
 

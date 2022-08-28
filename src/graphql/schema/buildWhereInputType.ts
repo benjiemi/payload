@@ -44,6 +44,7 @@ const buildWhereInputType = (name: string, fields: Field[], parentName: string):
             }), {})),
           };
         }
+        
 
         return {
           ...schema,

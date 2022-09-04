@@ -188,7 +188,7 @@ async function create(incomingArgs: Arguments): Promise<Document> {
     } catch (error) {
       // Handle uniqueness error from MongoDB
       throw error.code === 11000
-        ? new ValidationError([{ message: 'Value must be unique', field: Object.keys(error.keyValue)[0] }])
+        ? new ValidationError([{ message: 'Value must be unique', field: error}]) //Object.keys(error.keyValue)[0] 
         : error;
     }
   }

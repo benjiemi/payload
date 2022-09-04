@@ -169,9 +169,9 @@ const fieldToSchemaMap: (parentName: string) => any = (parentName: string) => ({
         },
       });
     }
-    else{
-      recursivelyBuildNestedPaths(parentName, field)
-    }
+    // else{
+    //   recursivelyBuildNestedPaths(parentName, field)
+    // }
 
     return { type };
   },
